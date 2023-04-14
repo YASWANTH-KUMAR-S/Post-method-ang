@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()">
+    <label>
+      Number:
+      <input type="number" [(ngModel)]="userNumber" name="userNumber" required>
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+<br>
+<label>DropdownMenu : </label>
+  <select [(ngModel)]="selectedOption" (change)="onDropdownChange()">
+    <option *ngFor="let option of dropdownOptions" [value]="option">{{ option }}</option>
+  </select>
+  
